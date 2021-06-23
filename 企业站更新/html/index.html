@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<style>
+    .navbar a {
+        height: 75px;
+        line-height: 75px;
+    }
+</style>
+
+<body>
+    <!-- 导航============================= -->
+
+
+
+    <nav class="navbar navbar-default" style="height: 85px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="../img/logo.png" style=" margin-left: 100px; height: 150%;">
+                </a>
+                <a class="navbar-brand" href="./index.html">
+                    首页
+                </a>
+                <a class="navbar-brand" href="./news.html">
+                    新闻
+                </a>
+                <a class="navbar-brand" href="./about.html">
+                    关于我们
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- <div class="nav">
+        <ul class="nav nav-tabs">
+
+            <li role="presentation" class="active"><a href="./index.html">首页</a></li>
+            <li role="presentation"><a href="./news.html">新闻</a></li>
+            <li role="presentation"><a href="./about.html">关于我们</a></li>
+            <li id="logo"><img src="../logo.png" alt=""></li>
+        </ul>
+
+    </div> -->
+    <!-- <div class="nav">
+        456
+    </div> -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script> -->
+
+    <!-- 导航============================= -->
+    <!-- 轮播======================== -->
+    <div class="container" id="myCarousel">
+        <!-- 轮播图容器 -->
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- 轮播图上的圆圈链接 -->
+            <ol class="carousel-indicators radiou">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播图具体内容 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="../img/qyqx.jpg" ">
+                        <!-- 图上文字 -->
+                        <div class=" carousel-caption">
+                    <h4>魔女宅急便</h4>
+                    <p>第13届日本电影金像奖・话题奖</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/xy.jpg">
+                <!-- 图上文字 -->
+                <div class="carousel-caption">
+                    <h4>White Car Fly</h4>
+                    <p>ajsuten hsdfupeia jsdtfua</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/qfl.jpg">
+                <!-- 图上文字 -->
+                <div class="carousel-caption">
+                    <h4>Blue Car Fly</h4>
+                    <p>ajsuten hsdfupeia jsdtfua</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- 轮播图上的向前一图切换链接 -->
+        <a href="#carousel-example-generic" data-slide="prev" class="left carousel-control">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <!-- 轮播图上的向后一图切换链接 -->
+        <a href="#carousel-example-generic" data-slide="next" class="right carousel-control">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    </div>
+
+    <!-- 引入jquery与bootstrap的js文件 -->
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(".carousel").carousel({
+            interval: 2000 //每隔两秒自动轮播
+        })
+    </script>
+    <!-- 轮播======================== -->
+    <!-- 服务范围 --================================ -->
+
+
+    <div class="page-header">
+        <h1>服务范围 <small></small></h1>
+    </div>
+    <!-- =============================== -->
+    <div class="row w">
+
+
+        <!-- ===================== -->
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+            </a>
+            <h4 style="text-align: center;">电影</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+            </a>
+            <h4 style="text-align: center;">作画</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+            </a>
+            <h4 style="text-align: center;">音乐</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+            </a>
+            <h4 style="text-align: center;">123</h4>
+        </div>
+    </div>
+
+
+
+    <!-- 服务范围 --================================ -->
+    <!-- 团队介绍============================ -->
+    <div class="page-header">
+        <h1>团队介绍 <small></small></h1>
+    </div>
+    <!-- ========================================= -->
+    <ul class="media-list w">
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/xy.jpg" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+
+            </div>
+        </li>
+        <!-- ======================================== -->
+        </li>
+        <li class="media">
+
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, provident itaque, numquam ex corrupti
+                autem voluptas tenetur iusto laboriosam, perspiciatis nam? Nulla, explicabo consectetur! Quod harum
+                quibusdam eaque quaerat ipsa.
+            </div>
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/xy.jpg" alt="...">
+                </a>
+            </div>
+        </li>
+        <!-- ========================================= -->
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/xy.jpg" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, provident itaque, numquam ex corrupti
+                autem voluptas tenetur iusto laboriosam, perspiciatis nam? Nulla, explicabo consectetur! Quod harum
+                quibusdam eaque quaerat ipsa.
+            </div>
+        </li>
+        <!-- ======================================== -->
+        <li class="media">
+
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, provident itaque, numquam ex corrupti
+                autem voluptas tenetur iusto laboriosam, perspiciatis nam? Nulla, explicabo consectetur! Quod harum
+                quibusdam eaque quaerat ipsa.
+            </div>
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../img/xy.jpg" alt="...">
+                </a>
+            </div>
+        </li>
+        <!-- ======================================================= -->
+    </ul>
+    <!-- ================================ -->
+
+    <!-- ======================================== -->
+
+    <!-- ====================================== -->
+
+    <!-- =========================================== -->
+    <!-- ========================================2 -->
+
+    <!-- ====================================== -->
+
+    <!-- =========================================== -->
+
+
+    <!-- 团队介绍============================ -->
+    <!-- ==============新闻=============================== -->
+    <div class="page-header">
+        <h1>新闻动态<small></small></h1>
+    </div>
+    <!-- ==============新闻=============================== -->
+    <div class="new w">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>4566</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                            role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- ================================================ -->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>4566</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                            role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- ======================================================= -->
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/xy.jpg" alt="...">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>4566</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                            role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ==============新闻=============================== -->
+    <!-- ==============新闻=============================== -->
+    <!-- ========页脚================================================= -->
+
+    <div class="row ">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/联系.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/邮件.png" alt="...">
+            </a>
+            <h4>邮件</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/星球.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/二维码.png" alt="...">
+            </a>
+            <h4>请联系我们</h4>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- ===================页脚===================================== -->
+
+
+    <li id="loey">版权所有@loey</li>
+
+</body>
+
+</html>

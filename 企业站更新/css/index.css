@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    /* background: url(../img/); */
+        /* background-color: rgb(87, 145, 181); */
+}
+a{
+    text-decoration: none;
+    color: #262626;
+    font-size: 20px;
+}
+li{
+    list-style: none;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================== */
+        /* * {
+          
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+
+        } */
+
+        /* body {
+            /* background-color:cadetblue; */
+        /* } */ 
+     
+        #logo img{
+            width: 15%; 
+          /* height: 100%; */
+        }
+        .nav li:nth-child(4){
+            float: right;
+        }
+       
+
+        /*调整容器大小*/
+        #myCarousel {
+            /* width: 1200px; */
+            width: 100%;
+          
+            box-shadow: #232323 30px;
+        }
+
+
+
+
+        /*调整圆圈链接ol位置*/
+        .carousel-indicators {
+            bottom: -5px;
+        }
+
+        /*调整轮播图位置*/
+        #carousel-example-generic {
+            top: 15px;
+        }
+
+        .carousel-inner .item {
+            /* width: 200%; */
+            background-color:  rgb(159, 198, 199);;
+
+        }
+
+        .carousel-inner .item img {
+            width: 1200px;
+            height: 461px;
+            margin: auto;
+            /* background-color: brown; */
+        }
+        /* ========================================= */
+
+        .page-header h1{
+text-align: center;
+        }
+       
+        /* ========================================= */
+        .media-list img{
+            width: 500px;
+        }
+h4{
+    /* font-size: 25px; */
+    text-align: center;
+
+}
+#loey{
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+    border-bottom: 1px solid #000;
+}

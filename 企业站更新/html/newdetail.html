@@ -1,0 +1,196 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>详情页</title>
+    <link rel="shortcut icon" href="./loey2.ico" />
+
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="./commen.css">
+    <link rel="stylesheet" href="./news.css">
+
+
+    <!-- ======================== -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .containter {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 140px;
+
+        }
+
+        .h1 h1 {
+            text-align: end;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            max-width: 600px;
+
+        }
+
+        .list {
+            width: 50px;
+            margin: auto;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        .list li {
+
+            padding: 40px;
+
+            border: 1px solid seashell;
+        }
+
+        /* .list img {
+
+            width: 100%;
+            height: 600px;
+        
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+    <nav class="navbar navbar-default" style="height: 85px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="../img/logo.png" style=" margin-left: 100px; height: 150%;">
+                </a>
+                <a class="navbar-brand" href="./index.html">
+                    首页
+                </a>
+                <a class="navbar-brand" href="./news.html">
+                    新闻
+                </a>
+                <a class="navbar-brand" href="./about.html">
+                    关于我们
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+    <!-- ======================================================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    </div>
+    <div class="container">
+        <div>
+
+        </div>
+    </div>
+    <!-- ====================================== -->
+    <div class="row ">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/联系.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/邮件.png" alt="...">
+            </a>
+            <h4>邮件</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/星球.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/二维码.png" alt="...">
+            </a>
+            <h4>请联系我们</h4>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- ===================页脚===================================== -->
+
+
+    <li id="loey">版权所有@loey</li>
+
+    <!-- ======================================= -->
+    <script>
+        console.log(window.location.search.split('=')[1])
+        let id = window.location.search.split('=')[1]
+        axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products/${id}`).then(function (res) {
+            console.log(res.data);
+            let title = $(`<h1>${res.data.name}</h1>`);
+            let img = $(`<img src=${res.data.images[0].src} />`);
+            $('.container').append(title);
+            $('.container').append(img);
+        })
+    </script>
+</body>
+
+</html>

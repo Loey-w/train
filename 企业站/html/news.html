@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>详情页</title>
+    <link rel="shortcut icon" href="./loey2.ico" />
+
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="./commen.css">
+    <link rel="stylesheet" href="./news.css">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- ======================== -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous"><!-- 导入bootstrap v5的CSS 文件去除integrity部分 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script><!-- 导入bootstrap v5的js文件集成包去除integrity部分 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<style>
+    .list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .list li {
+        border: 1px solid seashell;
+    }
+
+    .list img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .navbar a {
+        height: 75px;
+        line-height: 75px;
+    }
+</style>
+
+<body>
+
+
+    <nav class="navbar navbar-default" style="height: 85px;  ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="../img/logo.png" style=" height: 100%;">
+                </a>
+                <a class="navbar-brand" href="./index.html">
+                    首页
+                </a>
+                <a class="navbar-brand" href="./news.html">
+                    新闻
+                </a>
+                <a class="navbar-brand" href="./about.html">
+                    关于我们
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- ============================ =================================== -->
+        <div>
+            <!-- =============== -->
+
+
+            <ul class="list">
+
+            </ul>
+        </div>
+        <!-- 分页 -->
+        <div style="margin-left: 550px;">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li onclick="pre()" class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li onclick="next()" class="page-item">
+                        <!-- ============================================ -->
+                        <!-- <li onclick="page(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+                <li onclick="page(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+                <li onclick="page(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+                <li onclick="next()" class="page-item"> -->
+
+                        <!-- ================================================= -->
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- ================================== -->
+
+    </div>
+    <div class="row " style="margin-top: 100px;">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/联系.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/邮件.png" alt="...">
+            </a>
+            <h4>邮件</h4>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/星球.png" alt="...">
+            </a>
+            <h4>地址</h4>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="../img/二维码.png" alt="...">
+            </a>
+            <h4>请联系我们</h4>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- ===================页脚===================================== -->
+
+
+    <li id="loey">版权所有@loey</li>
+
+</body>
+
+</html>
+
+<script>
+    // ============================================
+
+    // let current = window;
+    // function pre() {
+    //     if (current > 1) {
+    //         page(current - 1);
+
+    //     }
+    // }
+    // function next() {
+    //     if (current < 3) {
+    //         page(current + 1);
+
+    //     }
+    // }
+    // function page(page) {
+    //     current = page;
+    //     $('.list').empty();
+    //     axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products?page=${page}`).then(function (res) {
+    //         console.log(res.data);
+    //         for (let i = 0; i < 9; i++) {
+    //             let li = $('<li></li>');
+    //             li.append(`<img width='300px' hight='300px' src=${res.data[i].images[0].src}>`);
+    //             li.append(`<h3>${res.data[i].name}</h3>`)
+    //             li.append(`<span>${res.data[i].date_created}</span>`)
+    //             li.attr('id', res.data[i].id);
+    //             $('.list').append(li)
+    //         }
+    //         $('.list li').click(function () {
+    //             window.location.href = `./newdetail.html?id=${$(this).attr('id')}`
+    //         })
+    //     })
+    // }
+
+
+    // ============================================
+    let current = Number(window.location.href.split("?page=")[1]) || 1;
+    function pre() {
+        if (current > 1) {
+            getUrl(current - 1);
+
+        }
+    }
+    function next() {
+        if (current < 3) {
+            getUrl(current + 1);
+
+        }
+    }
+    function getUrl(page) {
+        window.location.href = `?page=${page}`
+    }
+    page(current)
+    function page(page) {
+        current = page;
+        $('.list').empty();
+        axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products?page=${page}`).then(function (res) {
+            console.log(res.data);
+            for (let i = 0; i < 9; i++) {
+                let li = $('<li></li>');
+                li.append(`<img width='300px' hight='300px' src=${res.data[i].images[0].src}>`);
+                li.append(`<h3>${res.data[i].name}</h3>`)
+                li.append(`<span>${res.data[i].date_created}</span>`)
+                li.attr('id', res.data[i].id);
+                $('.list').append(li)
+            }
+            $('.list li').click(function () {
+                window.location.href = `./newdetail.html?id=${$(this).attr('id')}`
+            })
+        })
+    }
+</script>
