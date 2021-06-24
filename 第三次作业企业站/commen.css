@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background-image: url(./img/61.jpg); */
+}
+a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 20px;
+}
+li {
+  list-style: none;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
+#nav {
+  position: fixed;
+  top: 1%;
+  left: 30%;
+  /* transform: translate(-50%,-50%);  */
+  /* margin: 0 auto; */
+  padding: 0;
+  display: flex;
+  z-index: 4;
+}
+#logo img {
+  width: 60px;
+  height: 60px;
+}
+#nav li {
+  list-style: none;
+}
+#nav li a {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: #262626;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#nav li a:hover {
+  color: #fff;
+}
+#nav li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+#nav li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+#nav li a:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border-bottom: 1px solid #000;
+      border-top: 1px solid #000; */
+  transform: scale(0);
+  background: #000;
+  transition: 0.5s;
+  z-index: -1;
+}
+#nav li a:hover:after {
+  transform: scale(1);
+}
+
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+
+.footer {
+  height: 400px;
+  width: 100%;
+  margin-top: 60px;
+  /* background-color: rebeccapurple; */
+  background-color: rgb(192, 192, 192, 0.5);
+}
+.footer h1 {
+  text-align: center;
+  border-bottom: 1px solid var(--h2_border_color);
+}
+.footer .connect {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.ban {
+  margin: auto;
+  padding: 40px;
+  width: 600px;
+  text-align: center;
+  border-bottom: black 1px solid;
+}
