@@ -1,0 +1,70 @@
+
+body{
+    background:url(./img/61.jpg) repeat 50% 0px;
+    
+}
+.about{
+   width: 1200px;
+   margin: auto; 
+   margin-top: 160px;
+   background-color: #99999999;
+}
+/* #container {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+  
+    margin-top: 20%;
+    margin-left: 50%;
+    font-family: "微软雅黑";
+} */
+.about{
+    display: flex;
+    height: 520px;
+}
+#map{
+margin-top: 60px;
+}
+.media h4{
+    text-align: center;
+}
+.media img{
+    
+    width: 50px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.media{
+    margin-top: 60px;
+    width: 600px;
+    height: 402px;
+  
+    /* background-color: #fff; */
+    /* display: inline-block; */
+    /* float: right; */
+    
+   
+}
+.media li{
+   
+    height:80px; 
+   
+width: 200px;
+    
+   
+}  
+
+
+
+.media span{
+   float: left;
+    height: 80px;
+    line-height: 80px;
+    /* margin-right: 10px; */
+}  
+
+   
+
