@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,
+li{
+    list-style: none;
+    padding: 0px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+ 
+
+
+
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color:rgb(167, 184, 201);
+    color: black;
+}
+.footer .a{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 80px;
+    font-size: 22px
+}
+.footer .b{
+    height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: 7px solid #000;
+    font-size: 22px;
+    text-align: center;
+}
+.footer #footer-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/*
+@media screen and (min-width:540px) {
+    .clo-sm-12{
+        width: 100%;
+    }
+    .clo-sm-6{
+        width: 50%;
+    }
+    .clo-sm-4{
+        width: 33.3%;
+    }
+    .clo-sm-3{
+        width: 25%;
+    }
+    .clo-sm-2{
+        width: 20%;
+    }
+}
+@media  screen and (min-with:720px) {
+
+.clo-md-12{
+    width:100% ;
+}
+.clo-md-6{
+    width: 50%;
+}
+.clo-md-4{
+    width: 33.3%;
+}
+.clo-md-3{
+    width: 25%;
+}
+.clo-md-2{
+width: 16.6666666667%;
+}
+
+    
+}
+@media screen and (min-with:960px) {
+    .clo-lg-12{
+        width: 100%;
+    }
+    .clo-lg-6{
+        width: 50%;
+    }
+    .clo-lg-4{
+        width: 33.3%;
+    }
+    .clo-lg-3{
+        width: 25%;
+    }
+    .clo-lg-2{
+        width: 16.666666667%;
+    }
+}
+@media  screen and (min-width:1140px) {
+    .clo-xl-12{
+        width: 100%;
+    }
+    .clo-xl-6{
+        width: 50%;
+    }
+    .clo-xl-4{
+        width: 33.3%;
+    }
+    .clo-xl-3{
+        width: 25%;
+    }
+    .clo-xl-2{
+        width: 16.666666667%;
+    }
+    .footer #footer-img{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+}
+
+.scroll-con {
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll-con-img {
+    
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s;
+} */
+
+.fade {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s;
+}
+.fade:not(.show) {
+    opacity: 1;
+}
