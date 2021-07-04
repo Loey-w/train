@@ -101,7 +101,9 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- <img src="../img/qfl.jpg" class="" alt="..."> -->
-                <img data-src="../img/qfl.jpg" class="scroll-con-img img-fluid d-block w-100 " alt="...">
+                <img data-src="../img/qfl.jpg" data-srcset="../img/qfl.jpg 1200w,
+                     ../img/qfl_1000.jpg 1000w, 
+                     ../img/qfl_720.jpg 720w" data-sizes="auto" class="scroll-con-img d-block w-100 " alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>起风了</h5>
                     <p>《起风了》（英语：THE WIND RISES）是导演兼脚本的宫崎骏以同名漫画所改编的动画电影。该片于2013年7月20日在日本上映。</p>
@@ -109,7 +111,9 @@
             </div>
             <div class="carousel-item">
                 <!-- <img src="../img/xy.jpg" class="d-block w-100" alt="..."> -->
-                <img data-src="../img/xy.jpg" class="scroll-con-img img-fluid d-block w-100 " alt="...">
+                <img data-src="../img/xy.jpg" data-srcset="../img/xy.jpg 1200w,
+                     ../img/xy_1000.jpg 1000w, 
+                     ../img/xy_720.jpg 720w" data-sizes="auto" class="scroll-con-img d-block w-100 " alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>悬崖上的金鱼姬</h5>
                     <p>《崖上的波妞》是由吉卜力工作室制作，宫崎骏执导、编剧，奈良柚莉爱、山口智子、长岛一茂等配音的长篇动画电影，于2008年7月19日在日本首映。、2020年12月31日在中国内地上映。
@@ -118,7 +122,9 @@
             </div>
             <div class="carousel-item">
                 <!-- <img src="../img/totoro.jpg" class="d-block w-100" alt="..."> -->
-                <img data-src="../img/totoro.jpg" class="scroll-con-img img-fluid d-block w-100 " alt="...">
+                <img data-src="../img/totoro.jpg" data-srcset="../img/totoro.jpg 1200w,
+                ../img/totoro_1000.jpg 1000w, 
+                ../img/totoro_720.jpg 720w" data-sizes="auto" class="scroll-con-img d-block w-100 " alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>龙猫</h5>
                     <p>《龙猫》是由宫崎骏执导，日高法子、坂本千夏、糸井重里配音的动画电影，于1988年4月16日在日本上映。高清重制版于2018年12月14日在中国公映</p>
@@ -409,7 +415,9 @@
                 if (entry.isIntersecting) {
                     const img = entry.target
                     const src = img.getAttribute('data-src')
-                    img.setAttribute('src', src)
+                    const srcset = img.getAttribute('data-srcset')
+                    if (src != null) { img.setAttribute('src', src) }
+                    if (srcset != null) { img.setAttribute('srcset', srcset) }
                     img.classList.add('fade')
                     observer.disconnect()
                 }
